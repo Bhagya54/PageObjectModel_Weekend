@@ -1,0 +1,4 @@
+INFO    2024-05-18 16:29:36,296 [main] base.BaseTest  - Test Execution started
+INFO    2024-05-18 16:29:36,297 [main] base.BaseTest  - Config file has been loaded
+INFO    2024-05-18 16:29:45,870 [main] base.BaseTest  - Firefox browser has launched
+INFO    2024-05-18 16:29:45,949 [main] base.BaseTest  - Database connection established
