@@ -1,8 +1,10 @@
 package testcases;
 
+import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
 
+import base.BasePage;
 import base.BaseTest;
 import extentlisteners.ExtentListeners;
 import pages.HomePage;
@@ -13,7 +15,7 @@ public class FindNewCarsTest extends BaseTest{
 
 	
 	@Test(dataProviderClass = DataUtils.class,dataProvider = "dp")
-	public void getFindNewCars(String runmode,String browser,String brandName) {
+	public void getFindNewCars(String runmode,String browser,String brandName,String carTitle) {
 		
 		if(runmode.equals("n")) {
 			throw new SkipException("Skipping this testcase as runmode is n");
@@ -45,8 +47,13 @@ public class FindNewCarsTest extends BaseTest{
 			newCar.gotoBmw();
 		}
 		
-		System.out.println(driver.getTitle());
+		//System.out.println(driver.getTitle());
+		
+		Assert.assertEquals(BasePage.carBasePage.getTitle(), carTitle);
 		ExtentListeners.test.info("Navigated to " + brandName + " page");
 		
+		
+		BasePage.carBasePage.getCarModelAndPrices();
+		ExtentListeners.test.info("Model and Prices of: " + brandName + " page");
 	}
 }

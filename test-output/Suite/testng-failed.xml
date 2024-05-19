@@ -9,7 +9,7 @@
       <class name="testcases.FindNewCarsTest">
         <methods>
           <include name="tearDown"/>
-          <include name="getFindNewCars" invocation-numbers="1 2"/>
+          <include name="getFindNewCars" invocation-numbers="0"/>
         </methods>
       </class> <!-- testcases.FindNewCarsTest -->
     </classes>
